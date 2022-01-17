@@ -23,7 +23,7 @@
         </form>
         
         <div>${msg}</div>
-        <a href="">Arithmetic Calculator</a>
+        <a href="arithmetic">Arithmetic Calculator</a>
         
     </body>
 </html>
