@@ -41,11 +41,15 @@ public class AgeCalculatorServlet extends HttpServlet {
         if(!ageInput.isEmpty()) {
             try {
                 int age = Integer.parseInt(ageInput);
-        
-                age++;
-        
-                msg = String.format("Your age next birthday will be %d.", age);
                 
+                if(age < 0) {
+                    msg = "You must give a valid number.";
+                }
+                else {     
+                    age++;
+
+                    msg = String.format("Your age next birthday will be %d.", age);
+                }
             }
             catch(Exception ex) {
                 msg = "You must enter a number.";
